@@ -1,10 +1,6 @@
-let a = prompt("introduce primer número del 1 al 100");
-let b = prompt("introduce segundo número del 1 al 100");
-let c = prompt("introduce tercer número del 1 al 100");
-
-a= parseFloat(a);
-b= parseFloat(b);
-c= parseFloat(c);
+let a =parseFloat(prompt("introduce primer número del 1 al 100"));
+let b =parseFloat(prompt("introduce segundo número del 1 al 100"));
+let c =parseFloat(prompt("introduce tercer número del 1 al 100"));
 //Identificar número mayor 
 if ((a>b) && (a>c)) {
     console.log("El número mayor es", a);
@@ -45,3 +41,11 @@ if (e % 1 == 0) {
 }    else  console.log("No es un número múltiplo de 3")
 
    
+formulageneral(1, 3, -10);
+    formulageneral(1, -4, 3);
+    writePI();
+
+    function formulageneral(a, b, c){
+        let x1 = (-b+Math.sqrt(((b*b)-(4*a*c))))/(2*a);
+        let x2 = (-b-Math.sqrt(((b*b)-(4*a*c))))/(2*a);
+        console.log("x1=", x1, "x2=", x2);}
