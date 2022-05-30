@@ -40,12 +40,28 @@ if (e % 1 == 0) {
     console.log("Es un numero múltiplo de 3");
 }    else  console.log("No es un número múltiplo de 3")
 
-   
-formulageneral(1, 3, -10);
-    formulageneral(1, -4, 3);
-    writePI();
-
-    function formulageneral(a, b, c){
-        let x1 = (-b+Math.sqrt(((b*b)-(4*a*c))))/(2*a);
-        let x2 = (-b-Math.sqrt(((b*b)-(4*a*c))))/(2*a);
-        console.log("x1=", x1, "x2=", x2);}
+function Adivinar() {
+    let superior = 100;
+    let inferior = 0;
+    let noEncontrado =true;
+       while(noEncontrado){
+        let mid = parseInt(inferior + ((superior-inferior)/ 2));
+        console.log(mid);
+         if (((superior-inferior)/ 2)<1){
+            noEncontrado=false;
+            alert("tu numero es el " +(parseInt(mid)+1));
+                break;
+           }//if
+                 let res = confirm("Tu numero es menor o igual a " + mid)
+         if (res) {
+          superior=mid;
+            }else {
+               inferior=mid;
+                }//if
+                console.log(inferior, superior);
+            
+            }//while
+            
+            
+            }//function
+            Adivinar();
